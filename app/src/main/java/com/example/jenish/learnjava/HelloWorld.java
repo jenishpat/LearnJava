@@ -11,5 +11,9 @@ public class HelloWorld {
         String jenish = "Jenish Patel";
         System.out.println(jenish);
 
+        int biWeeklySalary = 1000;
+        int monthlySalary = biWeeklySalary * 2;
+
+        System.out.println("My monthly salary is: " + monthlySalary);
     }
 }
