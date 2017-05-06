@@ -6,14 +6,15 @@ package com.example.jenish.learnjava;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello World");
 
-        String jenish = "Jenish Patel";
-        System.out.println(jenish);
+        int lives = 0;
+        boolean isGameOver = (lives < 1);
+        System.out.println(isGameOver);
 
-        int biWeeklySalary = 1000;
-        int monthlySalary = biWeeklySalary * 2;
-
-        System.out.println("My monthly salary is: " + monthlySalary);
+        if (isGameOver){
+            System.out.println("Game Over!");
+        } else {
+            System.out.println("You're still in the game");
+        }
     }
 }
