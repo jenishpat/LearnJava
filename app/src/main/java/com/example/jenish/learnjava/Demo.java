@@ -7,15 +7,15 @@ package com.example.jenish.learnjava;
 public class Demo {
 
     public static void main(String[] args) {
-        Player jenish = new Player("Jenish Patel"); // Created instance of a player class
-       /* System.out.println("Player: " + jenish.getHandleName());
+        /*Player jenish = new Player("Jenish Patel"); // Created instance of a player class
+       *//* System.out.println("Player: " + jenish.getHandleName());
         System.out.println("Level: " + jenish.getLevel());
         System.out.println("Lives: " + jenish.getLives());
-        System.out.println("Weapon: " + jenish.getWeapon().getName());*/
+        System.out.println("Weapon: " + jenish.getWeapon().getName());*//*
 
         Weapon myAxe = new Weapon("Goldshine Axe", 20, 50);
-        /*jenish.setWeapon(myAxe);
-        System.out.println(jenish.getWeapon().getName());*/
+        *//*jenish.setWeapon(myAxe);
+        System.out.println(jenish.getWeapon().getName());*//*
 
         Loot redPotion = new Loot("Red Potion", LootType.POTION, 7);
         jenish.pickUpLoot(redPotion);
@@ -27,6 +27,11 @@ public class Demo {
 
         boolean wasDeleted = jenish.dropLoot(redPotion);
         System.out.println(wasDeleted);
-        jenish.showInventory();
+        jenish.showInventory();*/
+
+        Enemy enemy = new Enemy("Jenish Patel", 10, 3);
+        enemy.showInfo();
+        enemy.takeDamage(7);
+        enemy.showInfo();
     }
 }
