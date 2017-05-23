@@ -29,9 +29,12 @@ public class Demo {
         System.out.println(wasDeleted);
         jenish.showInventory();*/
 
-        Enemy enemy = new Enemy("Jenish Patel", 10, 3);
+        /*Enemy enemy = new Enemy("Jenish Patel", 10, 3);
         enemy.showInfo();
         enemy.takeDamage(7);
-        enemy.showInfo();
+        enemy.showInfo();*/
+        Troll uglyTroll = new Troll("Jay Bhavsar");
+        uglyTroll.showInfo();
+        uglyTroll.takeDamage(27);
     }
 }
