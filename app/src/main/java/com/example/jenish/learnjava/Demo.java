@@ -29,12 +29,46 @@ public class Demo {
         System.out.println(wasDeleted);
         jenish.showInventory();*/
 
-        /*Enemy enemy = new Enemy("Jenish Patel", 10, 3);
-        enemy.showInfo();
-        enemy.takeDamage(7);
-        enemy.showInfo();*/
-        Troll uglyTroll = new Troll("Jay Bhavsar");
-        uglyTroll.showInfo();
-        uglyTroll.takeDamage(27);
+/*        VampireKing dracula = new VampireKing("dracula");
+        dracula.showInfo();
+
+        int hits = 0;
+
+        dracula.setLives(0);
+
+        do {
+            if (dracula.dodges()) {
+                dracula.setLives(dracula.getLives() + 1);
+                continue;
+            }
+
+            if (dracula.runAway()) {
+                System.out.println("Dracula ran away");
+                break;
+            } else {
+                dracula.takeDamage(80);
+                dracula.showInfo();
+            }
+            hits = hits + 1;
+        } while (dracula.getLives() > 0);
+        System.out.println("It took " + hits + " hits to kill the dracula");
+        System.out.println("================================================");*/
+
+        Player conan = new Player("Conan");
+        conan.pickUpLoot(new Loot("Invisibility", LootType.POTION, 4));
+        conan.pickUpLoot(new Loot("Mithril", LootType.ARMOR, 183));
+        conan.pickUpLoot(new Loot("Ring of speed", LootType.RING, 25));
+        conan.pickUpLoot(new Loot("Red Potion", LootType.POTION, 2));
+        conan.pickUpLoot(new Loot("Cursed Shield", LootType.ARMOR, -8));
+        conan.pickUpLoot(new Loot("Brass Ring", LootType.RING, 1));
+        conan.pickUpLoot(new Loot("Chain Mail", LootType.ARMOR, 4));
+        conan.pickUpLoot(new Loot("Gold Ring", LootType.RING, 12));
+        conan.pickUpLoot(new Loot("Health Potion", LootType.POTION, 3));
+        conan.pickUpLoot(new Loot("Silver Ring", LootType.RING, 6));
+        conan.showInventory();
+
+        System.out.println(conan.score());
+        conan.dropLoot("Cursed Shield");
+        System.out.println(conan.score());
     }
 }

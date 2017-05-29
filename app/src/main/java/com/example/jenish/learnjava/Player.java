@@ -114,12 +114,33 @@ public class Player {
         return false;
     }
 
+    public boolean dropLoot (String lootName) {
+        for (Loot currentLoot : inventory){
+            if (currentLoot.getName().equals(lootName)) {
+                inventory.remove(currentLoot);
+                return true;
+            }
+        }
+        return false;
+    }
+
     // Goes through the array and displays every item in the inventory
     public void showInventory() {
-        for (Loot item : inventory){
+        for (Loot item : inventory) {
             System.out.println(item.getName());
         }
         System.out.println("=========================");
+    }
+
+    public int score() {
+        int total = 0;
+       /* for (int i = 0; i < inventory.size(); i++) {
+            Loot currentLoot = inventory.get(i);*/
+        for (Loot currentLoot : inventory) {
+            System.out.println(currentLoot.getName() + " is worth " + currentLoot.getValue());
+            total = total + currentLoot.getValue();
+        }
+        return total;
     }
 }
 

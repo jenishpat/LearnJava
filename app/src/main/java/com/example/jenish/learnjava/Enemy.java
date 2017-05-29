@@ -23,7 +23,7 @@ public class Enemy {
         } else {
             this.lives = this.lives - 1;
             if (this.lives > 0) {
-                System.out.println("I've lost a life." + this.lives + " lives left");
+                System.out.println("I've lost a life. " + this.lives + " lives left");
             } else {
                 System.out.println("No lives left. I'm dead!");
             }
